@@ -1,0 +1,13 @@
+
+# Entorno virtual de Python
+.venv/
+
+# Variables de entorno y contraseñas
+.env
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Archivos de pruebas
+.pytest_cache/
