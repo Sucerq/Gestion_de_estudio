@@ -3,7 +3,7 @@
 .venv/
 
 # Variables de entorno y contraseñas
-.env
+#.env
 
 # Archivos temporales de Python
 __pycache__/
