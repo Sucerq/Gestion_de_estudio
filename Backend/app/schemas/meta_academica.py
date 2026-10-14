@@ -16,12 +16,13 @@ class MetaAcademicaActualizar(BaseModel):
 
     tiempo_objetivo: int | None = Field(default=None, gt=0)
 
-    class MetaAcademicaRespuesta(BaseModel):
-        model_config = ConfigDict(from_attributes=True)
 
-        id_meta: uuid.UUID
-        titulo: str
-        descripcion: str | None
-        tiempo_objetivo: int
-        tiempo_completado: int
-        estado: str
+class MetaAcademicaRespuesta(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id_meta: uuid.UUID
+    titulo: str
+    descripcion: str | None
+    tiempo_objetivo: int
+    tiempo_completado: int
+    estado: str
