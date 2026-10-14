@@ -1,4 +1,4 @@
-import uiud
+import uuid
 from sqlalchemy import Integer, String, CheckConstraint
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column
@@ -19,14 +19,14 @@ class MetaAcademica(Base):
     )
     # Tablas y sus atributos
     id_meta: Mapped[uuid.UUID] = mapped_column(
-        UUID(as_uuid=true), primary_key=true, default=uuid.uuid4
+        UUID(as_uuid=True), primary_key=True, default=uuid.uuid4
     )
 
     titulo: Mapped[str] = mapped_column(String(150), nullable=False)
 
     descripcion: Mapped[str | None] = mapped_column(String(500), nullable=True)
 
-    tiempo_objetivo: Mapped[Int] = mapped_column(Integer, nullable=False)
+    tiempo_objetivo: Mapped[int] = mapped_column(Integer, nullable=False)
 
     tiempo_completado: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
 

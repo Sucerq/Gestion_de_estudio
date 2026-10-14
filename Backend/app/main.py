@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from app.routes.meta_academica import router as metas_router
 
 # Crear la aplicación FastAPI
 app = FastAPI(
@@ -6,6 +7,8 @@ app = FastAPI(
     description="API para gestionar sesiones de estudio",
     version="1.0.0",
 )
+
+app.include_router(metas_router)
 
 
 # Endpoint de inicio
